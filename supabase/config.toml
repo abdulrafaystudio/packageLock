@@ -1,0 +1,26 @@
+
+project_id = "ohiqolnendkhyuomdbnx"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[functions.upgrade-subscription]
+verify_jwt = true
+
+[functions.upgrade-recovery] 
+verify_jwt = true
+
+[functions.upgrade-health-check]
+verify_jwt = true
+
+[functions.test-upgrade-flow]
+verify_jwt = false
+
+[db]
+port = 54322
+shadow_port = 54320
+major_version = 15
